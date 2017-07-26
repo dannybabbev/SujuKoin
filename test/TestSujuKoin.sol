@@ -4,7 +4,7 @@ import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/SujuKoin.sol";
 
-contract TestMetacoin {
+contract TestSujuKoin {
   function test(){
     SujuKoin sujuKoin = new SujuKoin();
 
