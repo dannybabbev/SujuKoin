@@ -1,0 +1,190 @@
+{
+  "contract_name": "Crowdsale",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "checkGoalReached",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "deadline",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "beneficiary",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenReward",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "fundingGoal",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "amountRaised",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "price",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "safeWithdrawal",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "ifSuccessfulSendTo",
+          "type": "address"
+        },
+        {
+          "name": "fundingGoalInEthers",
+          "type": "uint256"
+        },
+        {
+          "name": "durationInMinutes",
+          "type": "uint256"
+        },
+        {
+          "name": "etherCostOfEachToken",
+          "type": "uint256"
+        },
+        {
+          "name": "addressOfTokenUsedAsReward",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountRaised",
+          "type": "uint256"
+        }
+      ],
+      "name": "GoalReached",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "backer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "isContribution",
+          "type": "bool"
+        }
+      ],
+      "name": "FundTransfer",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040526007805461ffff19169055341561001757fe5b60405160a0806105d783398101604090815281516020830151918301516060840151608090940151919390915b60008054600160a060020a03808816600160a060020a031992831617909255670de0b6b3a764000080870260015542603c870201600355840260045560058054928416929091169190911790555b50505050505b610530806100a76000396000f3006060604052361561007d5763ffffffff60e060020a60003504166301cb3b20811461017a57806329dcb0cf1461018c57806338af3eed146101ae5780636e66f6e9146101da57806370a08231146102065780637a3a0e84146102345780637b3e5e7b14610256578063a035b1fe14610278578063fd6b7ef81461029a575b6101785b600754600090610100900460ff161561009a5760006000fd5b50600160a060020a03338181166000908152600660205260409020349081905560028054820190556005546004549193169163a9059cbb91848115156100dc57fe5b046040518363ffffffff1660e060020a0281526004018083600160a060020a0316600160a060020a0316815260200182815260200192505050600060405180830381600087803b151561012b57fe5b6102c65a03f1151561013957fe5b505060408051600160a060020a03331681526020810184905260018183015290516000805160206104e583398151915292509081900360600190a15b50565b005b341561018257fe5b6101786102ac565b005b341561019457fe5b61019c61032d565b60408051918252519081900360200190f35b34156101b657fe5b6101be610333565b60408051600160a060020a039092168252519081900360200190f35b34156101e257fe5b6101be610342565b60408051600160a060020a039092168252519081900360200190f35b341561020e57fe5b61019c600160a060020a0360043516610351565b60408051918252519081900360200190f35b341561023c57fe5b61019c610363565b60408051918252519081900360200190f35b341561025e57fe5b61019c610369565b60408051918252519081900360200190f35b341561028057fe5b61019c61036f565b60408051918252519081900360200190f35b34156102a257fe5b610178610375565b005b60035442106103295760015460025410610319576007805460ff1916600117905560005460025460408051600160a060020a039093168352602083019190915280517fec3f991caf7857d61663fd1bba1739e04abd4781238508cde554bb849d790c859281900390910190a15b6007805461ff0019166101001790555b5b5b565b60035481565b600054600160a060020a031681565b600554600160a060020a031681565b60066020526000908152604090205481565b60015481565b60025481565b60045481565b60035460009042106101755760075460ff1615156104365750600160a060020a03331660009081526006602052604081208054908290559081111561043657604051600160a060020a0333169082156108fc029083906000818181858888f193505050501561041a5760408051600160a060020a03331681526020810183905260008183015290516000805160206104e58339815191529181900360600190a1610436565b600160a060020a03331660009081526006602052604090208190555b5b5b60075460ff168015610458575060005433600160a060020a039081169116145b156101755760008054600254604051600160a060020a039092169281156108fc029290818181858888f19350505050156104d2576000805460025460408051600160a060020a03909316835260208301919091528181019290925290516000805160206104e58339815191529181900360600190a1610175565b6007805460ff191690555b5b5b5b5b505600e842aea7a5f1b01049d752008c53c52890b1a6daf660cf39e8eec506112bbdf6a165627a7a72305820917748ee73fabcacc75c574de9a3088627bdb70bc9420d8921b690084729a2cc0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1501247338900
+}

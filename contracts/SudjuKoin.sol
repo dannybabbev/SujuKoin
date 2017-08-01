@@ -35,11 +35,11 @@ contract ERC20Interface {
    event Approval(address indexed _owner, address indexed _spender, uint256 _value);
 }
 
-contract SujuKoin is ERC20Interface {
-   string public constant symbol = "SJK";
-   string public constant name = "SujuKoin";
-   uint8 public constant decimals = 4;
-   uint256 _totalSupply = 1000000;
+contract SudjuKoin is ERC20Interface {
+   string public constant symbol = "SJK1";
+   string public constant name = "SudjuKoin 1.0";
+   uint8 public constant decimals = 2;
+   uint256 _totalSupply = 2100000000;
 
    // Owner of this contract
    address public owner;
@@ -50,18 +50,11 @@ contract SujuKoin is ERC20Interface {
    // Owner of account approves the transfer of an amount to another account
    mapping(address => mapping (address => uint256)) allowed;
 
-   // Functions with this modifier can only be executed by the owner
-   modifier onlyOwner() {
-       if (msg.sender != owner) {
-           throw;
-       }
-       _;
-   }
 
    // Constructor
-   function SujuKoin() {
+   function SudjuKoin() {
      // TODO: must be owner = msg.sender
-       owner = tx.origin;
+       owner = msg.sender;
        balances[owner] = _totalSupply;
    }
 
