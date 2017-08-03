@@ -36,10 +36,10 @@ contract ERC20Interface {
 }
 
 contract SudjuKoin is ERC20Interface {
-   string public constant symbol = "SJK1";
-   string public constant name = "SudjuKoin 1.0";
+   string public constant symbol = "SJK";
+   string public constant name = "SudjuKoin";
    uint8 public constant decimals = 2;
-   uint256 _totalSupply = 2100000000;
+   uint256 _totalSupply = 1000000;
 
    // Owner of this contract
    address public owner;

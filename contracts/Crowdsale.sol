@@ -12,22 +12,22 @@ contract Crowdsale {
     bool fundingGoalReached = false;
     event GoalReached(address beneficiary, uint amountRaised);
     event FundTransfer(address backer, uint amount, bool isContribution);
-    bool crowdsaleClosed = false;
+    bool public crowdsaleClosed = false;
 
     /* data structure to hold information about campaign contributors */
 
     /*  at initialization, setup the owner */
     function Crowdsale() {
-        beneficiary = 0x17398F817F1406157CA9D60B375dC6Fc686Db620;
-        // Token admin address. Admin must approve transctions!
-        tokenAdmin = 0xD0d945034Fd881153c47f0C3203751a99faFA687;
+        beneficiary = ;
+        // Token admin address with total supply. Admin must approve transctions!
+        tokenAdmin = ;
         // Finding goal in ether
-        fundingGoal = 5 * 1 ether;
-        // Length of sale
-        deadline = now + 15 * 1 minutes;
+        fundingGoal = 1 * 1 ether;
+        // Length of sale in weeks
+        deadline = now + 4 * 1 weeks;
         // Price of 1 token in ethers / decimals
-        price = 0.001 / 100 * 1 ether;
-        // Token used as reward
+        price = 0.01 / 100 * 1 ether;
+        // Token used as reward address
         tokenReward = token(0xd0F820b980f9a08D407c49c2B9102EAb532b09A3);
     }
 
